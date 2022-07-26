@@ -1,0 +1,212 @@
+/* Import Google Font - Akshar */
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&display=swap');
+
+:root {
+    --color-body: linear-gradient(45deg, pink, skyblue);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Akshar', sans-serif;
+    font-weight: 500;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--color-body);
+}
+
+/*whole quote box*/
+.wrapper {
+    width: 605px;
+    background: #fff;
+    border-radius: 0.938rem;
+    /*15px*/
+    padding: 30px 30px 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+/*wrapper header */
+.wrapper header {
+    font-size: 2.188rem;
+    /*35px */
+    font-weight: 700;
+    text-align: center;
+}
+
+/*wrapper content above border line*/
+.wrapper .content {
+    margin: 2.188rem 0;
+    /*35px 0 */
+}
+
+.content .quote-area {
+    display: flex;
+    justify-content: center;
+}
+
+.quote-area i {
+    font-size: 0.938rem;
+    /*15px*/
+}
+
+.quote-area i:first-child {
+    margin: 0.188rem 0.625rem 0 0;
+    /*3px 10px 0 0 */
+}
+
+.quote-area i:last-child {
+    display: flex;
+    margin: 0 0 0.188rem 0.625rem;
+    /*3px 10px 0 0 */
+    align-items: flex-end;
+}
+
+/*.text*/
+.text {
+    font-size: 1.563rem;
+    /*25px*/
+    text-align: center;
+}
+
+/*#author*/
+#author {
+    display: flex;
+    font-size: 1.25rem;
+    /*20px*/
+    margin-top: 20px;
+    font-style: italic;
+    justify-content: flex-end;
+}
+
+/*#author span:first-child*/
+#author span:second-child {
+    margin: --0.438rem 0.313rem 0 0;
+    /* -7px 5px 0 0 */
+    font-family: monospace;
+}
+
+/* #quote-buttons*/
+#quote-buttons {
+    border-top: 1px solid #ccc;
+}
+
+/*buttons below the border line*/
+
+/*font-icons*/
+.buttons .features {
+    display: flex;
+    margin-top: 1.25rem;
+    /*20px*/
+    align-items: center;
+    justify-content: space-between;
+}
+
+.features ul {
+    display: flex;
+}
+
+.features ul li {
+    margin: 0 0.313rem;
+    /*0 5px*/
+    height: 2.938rem;
+    /*47px*/
+    width: 2.938rem;
+    /*47px*/
+    display: flex;
+    cursor: pointer;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #D4C5D6;
+    border-radius: 50%;
+    /*   transition: all 0.3s ease; */
+    /*   font-size:18px; */
+}
+
+.features ul li:first-child {
+    margin-left: 0;
+}
+
+.fa-gradient {
+    background: -webkit-linear-gradient(45deg, pink, skyblue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-gradient :hover {
+    font-size: 1.438rem;
+    /*23px;*/
+    text-shadow: 2px 2px 8px #ccc;
+}
+
+ul li:is(:hover, .active) {
+    background: -webkit-linear-gradient(45deg, pink, skyblue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+ul .speech.active {
+    pointer-events: none;
+}
+
+/*copy button css*/
+/*.copy-text:before{
+ content: "Copied";
+ position:absolute;
+  top: -45px;
+  right:0px;
+ background:#000000;
+ padding:8px 10px;
+ border-radius:20px;
+  font-size:15px;
+  color:blue;
+  display:block;
+}
+
+.copy-text:after {
+ content:"";
+ position:absolute;
+  top:-20px;
+  right:25px;
+ width:10px; I
+ height:10px;
+ background:#5c81dc;
+  transform:rotate(45deg);
+  display:;
+}
+.copy-text.active: before,
+.copy-text.active:after {
+ display:block;
+} */
+
+/*new quote button*/
+.buttons button {
+    border: none;
+    color: #fff;
+    outline: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 13px 22px;
+    border-radius: 1.875rem;/*30px*/
+    background: var(--color-body);
+    transition:all 0.3s;
+}
+
+.buttons button:hover{
+    transform:translateY(0.3rem);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+
+.buttons button.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
